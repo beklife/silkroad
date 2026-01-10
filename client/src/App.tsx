@@ -14,7 +14,7 @@ function App() {
       <TooltipProvider>
         <MusicProvider>
           <Toaster />
-          <Router base="/silkroad">
+          <Router>
             <Switch>
               <Route path="/" component={Home} />
               <Route path="/menu" component={MenuPage} />
