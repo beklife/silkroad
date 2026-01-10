@@ -5,11 +5,6 @@ import { useMusic } from "@/lib/MusicContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Phone, Clock, Menu as MenuIcon, X, ChevronDown, Mail, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Card, CardContent } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
 
 import heroImage from "@assets/stock_images/2024_11_04_Zira_Uzbek_Kitchen_046.jpg";
 import plovImage from "@assets/stock_images/uzbek_plov_rice_dish_c2c15446.jpg";
