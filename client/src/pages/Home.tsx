@@ -78,7 +78,7 @@ export default function Home() {
         }}
       />
       {/* Lighter overlay to maintain text readability while showing more carpet */}
-      <div className="fixed inset-0 pointer-events-none z-0 bg-background/40" />
+      <div className="fixed inset-0 pointer-events-none z-0 bg-background/65" />
 
       {/* Navigation */}
       <nav 
@@ -355,11 +355,12 @@ export default function Home() {
               <div className="absolute -top-6 -left-6 w-32 h-32 border-2 border-primary/30 z-20"></div>
             </motion.div>
             
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="bg-background/90 backdrop-blur-sm p-8 rounded-sm"
             >
               <h2 className="text-primary text-lg font-bold tracking-widest mb-2 flex items-center gap-2">
                 <span className="w-8 h-[2px] bg-primary"></span>
@@ -390,9 +391,9 @@ export default function Home() {
       </section>
 
       {/* Menu Highlights */}
-      <section id="menu" className="py-24 bg-card/50 relative z-10 border-y border-border/50">
+      <section id="menu" className="py-24 bg-card/80 backdrop-blur-sm relative z-10 border-y border-border/50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 bg-background/80 backdrop-blur-sm p-6 rounded-sm">
             <h2 className="text-primary text-lg font-bold tracking-widest mb-2">TASTE THE SILK ROAD</h2>
             <h3 className="text-4xl md:text-5xl font-heading font-bold mb-4">{t.menu.title}</h3>
             <p className="text-muted-foreground">{t.menu.subtitle}</p>
@@ -422,11 +423,11 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             
-            <motion.div 
+            <motion.div
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
-               className="bg-card p-8 md:p-12 rounded-sm border border-border shadow-sm relative overflow-hidden"
+               className="bg-card/90 backdrop-blur-sm p-8 md:p-12 rounded-sm border border-border shadow-sm relative overflow-hidden"
             >
                <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-accent/20 rounded-tr-3xl"></div>
                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-accent/20 rounded-bl-3xl"></div>
@@ -520,7 +521,7 @@ export default function Home() {
       {/* Contact Form */}
       <section id="contact" className="py-24 relative z-10">
         <div className="container mx-auto px-4 md:px-6 max-w-2xl">
-           <div className="text-center mb-12">
+           <div className="text-center mb-12 bg-background/80 backdrop-blur-sm p-6 rounded-sm">
              <h2 className="text-primary text-lg font-bold tracking-widest mb-2">RESERVATION</h2>
              <h3 className="text-4xl md:text-5xl font-heading font-bold mb-4">{t.contact.title}</h3>
            </div>
@@ -615,11 +616,11 @@ export default function Home() {
 
 function MenuCard({ image, title, desc, price }: { image: string, title: string, desc: string, price: string }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group bg-background rounded-sm overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-300"
+      className="group bg-background/95 backdrop-blur-sm rounded-sm overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-300"
     >
       <div className="aspect-[4/3] bg-muted relative overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
