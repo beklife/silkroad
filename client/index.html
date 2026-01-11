@@ -4,24 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
-    <title>SILK ROAD Restaurant Köln</title>
-    <meta name="description" content="SILK ROAD – Central Asian comfort food in Cologne. Plov, Manty, Lagman, Samsa. Warm hospitality and tea culture." />
+    <title>SILK ROAD Restaurant Köln | Central Asian Cuisine | Karl-Berbuer-Platz 7</title>
+    <meta name="description" content="SILK ROAD Restaurant in Köln Südstadt – Authentic Central Asian cuisine. Uzbek Plov, Manty, Lagman, Samsa. Near Severinstraße. Halal food, warm hospitality and traditional tea culture." />
+    <meta name="keywords" content="silk road restaurant köln, zentralasiatisches restaurant köln, uzbekisches restaurant köln, silk road köln, restaurant südstadt köln, halal restaurant köln, plov köln, manty köln, lagman köln, severinstraße restaurant, karl-berbuer-platz restaurant" />
     
-    <meta property="og:title" content="SILK ROAD Restaurant Köln" />
-    <meta property="og:description" content="Central Asian comfort food in Cologne. Plov, Manty, Lagman, Samsa." />
+    <meta property="og:title" content="SILK ROAD Restaurant Köln | Central Asian Cuisine" />
+    <meta property="og:description" content="Authentic Central Asian restaurant in Köln Südstadt. Uzbek Plov, Manty, Lagman, Samsa. Near Severinstraße." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/attached_assets/stock_images/hero.jpg" /> 
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SILK ROAD Restaurant Köln" />
-    <meta name="twitter:description" content="Central Asian comfort food in Cologne. Plov, Manty, Lagman, Samsa." />
+    <meta property="og:url" content="https://silk-road-restaurant.netlify.app/" />
+    <meta property="og:image" content="https://silk-road-restaurant.netlify.app/opengraph.jpg" />
+    <meta property="og:locale" content="de_DE" />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SILK ROAD Restaurant Köln | Central Asian Cuisine" />
+    <meta name="twitter:description" content="Authentic Central Asian restaurant in Köln Südstadt. Uzbek Plov, Manty, Lagman, Samsa." />
+    <meta name="twitter:image" content="https://silk-road-restaurant.netlify.app/opengraph.jpg" />
+
+    <link rel="canonical" href="https://silk-road-restaurant.netlify.app/" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     
     <!-- Google Fonts: Oswald (Headlines) and Montserrat (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data for Restaurant -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "SILK ROAD Restaurant",
+      "image": "https://silk-road-restaurant.netlify.app/opengraph.jpg",
+      "description": "Central Asian comfort food in Cologne. Plov, Manty, Lagman, Samsa. Authentic Uzbek, Uyghur and Kyrgyz cuisine with warm hospitality.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Karl-Berbuer-Platz 7",
+        "addressLocality": "Köln",
+        "addressRegion": "NRW",
+        "postalCode": "50678",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.947219,
+        "longitude": 6.939799
+      },
+      "url": "https://silk-road-restaurant.netlify.app",
+      "telephone": "+492214236352",
+      "servesCuisine": ["Uzbek", "Central Asian", "Uyghur", "Kyrgyz"],
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "17:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "menu": "https://silk-road-restaurant.netlify.app/menu",
+      "acceptsReservations": "True"
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
