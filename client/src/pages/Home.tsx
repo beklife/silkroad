@@ -313,12 +313,20 @@ export default function Home() {
           </div>
         </motion.div>
         
-        <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50"
+        <motion.div
+          animate={{ y: [0, 15, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 cursor-pointer"
+          onClick={() => scrollToSection("about")}
         >
-          <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-white to-transparent mx-auto"></div>
+          <span className="text-white/80 text-xs uppercase tracking-widest font-medium">Scroll</span>
+          <div className="w-8 h-12 border-2 border-white/60 rounded-full flex items-start justify-center p-2">
+            <motion.div
+              animate={{ y: [0, 16, 0], opacity: [1, 0.3, 1] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              className="w-1.5 h-1.5 bg-white rounded-full"
+            />
+          </div>
         </motion.div>
       </section>
 
