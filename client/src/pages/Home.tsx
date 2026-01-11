@@ -91,7 +91,7 @@ export default function Home() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => scrollToSection("about")} className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? "text-foreground" : "text-white/90"}`}>{t.nav.about}</button>
-            <button onClick={() => scrollToSection("menu")} className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? "text-foreground" : "text-white/90"}`}>{t.nav.menu}</button>
+            <Link href="/menu" onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })} className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? "text-foreground" : "text-white/90"}`}>{t.nav.menu}</Link>
             <button onClick={() => scrollToSection("location")} className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? "text-foreground" : "text-white/90"}`}>{t.nav.location}</button>
 
             <div className="h-4 w-px bg-white/30 mx-2"></div>
@@ -275,7 +275,7 @@ export default function Home() {
             >
               <div className="flex flex-col p-6 gap-4">
                 <button onClick={() => scrollToSection("about")} className="text-lg font-medium py-2 border-b border-dashed border-border">{t.nav.about}</button>
-                <button onClick={() => scrollToSection("menu")} className="text-lg font-medium py-2 border-b border-dashed border-border">{t.nav.menu}</button>
+                <Link href="/menu" className="text-lg font-medium py-2 border-b border-dashed border-border" onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}>{t.nav.menu}</Link>
                 <button onClick={() => scrollToSection("location")} className="text-lg font-medium py-2 border-b border-dashed border-border">{t.nav.location}</button>
               </div>
             </motion.div>
@@ -402,7 +402,7 @@ export default function Home() {
           </div>
           
           <div className="mt-12 text-center">
-            <Link href="/menu">
+            <Link href="/menu" onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}>
               <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white font-heading uppercase tracking-wide">
                 {lang === 'de' ? 'Vollständige Speisekarte' : lang === 'ru' ? 'Полное меню' : 'View Full Menu'}
               </Button>
@@ -549,8 +549,8 @@ function MenuCard({ image, title, desc, price }: { image: string, title: string,
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px", amount: 0.3 }}
-      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.4 }}
       className="group bg-background/95 backdrop-blur-sm rounded-sm overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-300"
     >
       <div className="aspect-[4/3] bg-muted relative overflow-hidden">

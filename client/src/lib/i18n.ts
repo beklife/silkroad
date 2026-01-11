@@ -5,7 +5,7 @@ export const translations = {
     nav: {
       about: "Über uns",
       menu: "Speisekarte",
-      location: "Standort",
+      location: "Kontakt",
       contact: "Kontakt",
       reserve: "Reservieren"
     },
