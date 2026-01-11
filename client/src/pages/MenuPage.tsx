@@ -6,12 +6,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import plovImage from "@assets/stock_images/uzbek_plov_rice_dish_c2c15446.jpg";
+import plovImage from "@assets/stock_images/menu/osh.jpg";
 import mantyImage from "@assets/stock_images/manty_dumplings_cent_45246789.jpg";
-import lagmanImage from "@assets/stock_images/lagman_noodle_soup_c_320e3471.jpg";
-import samsaImage from "@assets/stock_images/samsa_meat_pastry_ba_6d113edf.jpg";
-import shashlikImage from "@assets/stock_images/lamb_shashlik_kebab__90656a8c.jpg";
-import teaImage from "@assets/stock_images/central_asian_tea_ce_6b705fac.jpg";
+import lagmanImage from "@assets/stock_images/menu/uygurishe lagman.jpg";
+import samsaImage from "@assets/stock_images/menu/somsa.jpg";
+import shashlikImage from "@assets/stock_images/menu/shashlyk-meat-centralasia-food.jpg";
+import teaImage from "@assets/stock_images/menu/tea_1.jpg";
+import saladImage from "@assets/stock_images/menu/salat.jpg";
+import breadImage from "@assets/stock_images/menu/Uzbek-bread-obi-non-thumbnail-square-500x500.jpg";
+import ayranImage from "@assets/stock_images/menu/Ayran.jpeg";
+import kompotImage from "@assets/stock_images/menu/kompot.jpg";
 import carpetImage from "@assets/stock_images/persian_carpet.jpg";
 
 const langNames: Record<Language, string> = {
@@ -59,12 +63,12 @@ const fullMenu = {
   ],
   appetizers: [
     { id: 'samsa', image: samsaImage, price: '4.50€' },
-    { 
+    {
       id: 'salad',
-      image: null,
+      image: saladImage,
       price: '6.90€',
       names: { de: 'Achichuk Salat', en: 'Achichuk Salad', ru: 'Салат Ачичук' },
-      descs: { 
+      descs: {
         de: 'Frischer Tomaten-Zwiebel-Salat mit Kräutern und Sumach.',
         en: 'Fresh tomato-onion salad with herbs and sumac.',
         ru: 'Свежий салат из помидоров и лука с зеленью и сумахом.'
@@ -74,7 +78,7 @@ const fullMenu = {
   sides: [
     {
       id: 'non',
-      image: null,
+      image: breadImage,
       price: '3.50€',
       names: { de: 'Tandoor Non', en: 'Tandoor Bread', ru: 'Тандырная лепёшка' },
       descs: {
@@ -83,23 +87,23 @@ const fullMenu = {
         ru: 'Традиционная лепёшка из глиняной печи.'
       }
     },
-    {
-      id: 'rice',
-      image: null,
-      price: '4.00€',
-      names: { de: 'Basmatireis', en: 'Basmati Rice', ru: 'Рис Басмати' },
-      descs: {
-        de: 'Gedämpfter Basmatireis mit Butter.',
-        en: 'Steamed basmati rice with butter.',
-        ru: 'Рис басмати на пару с маслом.'
-      }
-    },
+    // {
+    //   id: 'rice',
+    //   image: null,
+    //   price: '4.00€',
+    //   names: { de: 'Basmatireis', en: 'Basmati Rice', ru: 'Рис Басмати' },
+    //   descs: {
+    //     de: 'Gedämpfter Basmatireis mit Butter.',
+    //     en: 'Steamed basmati rice with butter.',
+    //     ru: 'Рис басмати на пару с маслом.'
+    //   }
+    // },
   ],
   drinks: [
     { id: 'tea', image: teaImage, price: '5.50€' },
     {
       id: 'ayran',
-      image: null,
+      image: ayranImage,
       price: '3.50€',
       names: { de: 'Ayran', en: 'Ayran', ru: 'Айран' },
       descs: {
@@ -110,7 +114,7 @@ const fullMenu = {
     },
     {
       id: 'kompot',
-      image: null,
+      image: kompotImage,
       price: '4.00€',
       names: { de: 'Kompott', en: 'Kompot', ru: 'Компот' },
       descs: {
@@ -329,7 +333,7 @@ export default function MenuPage() {
         <MenuSection title={cats.drinks} items={fullMenu.drinks} lang={lang} getDishInfo={getDishInfo} />
         
         {/* Desserts */}
-        <MenuSection title={cats.desserts} items={fullMenu.desserts} lang={lang} getDishInfo={getDishInfo} />
+        {/* <MenuSection title={cats.desserts} items={fullMenu.desserts} lang={lang} getDishInfo={getDishInfo} /> */}
 
         {/* Footer Note */}
         <div className="mt-12 md:mt-20 text-center bg-card/90 backdrop-blur-sm p-4 md:p-8 rounded-sm border border-border/50">

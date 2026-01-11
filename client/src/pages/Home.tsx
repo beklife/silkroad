@@ -7,13 +7,13 @@ import { MapPin, Phone, Clock, Menu as MenuIcon, X, ChevronDown, Mail, Instagram
 import { Button } from "@/components/ui/button";
 
 import heroImage from "@assets/stock_images/2024_11_04_Zira_Uzbek_Kitchen_046.jpg";
-import plovImage from "@assets/stock_images/uzbek_plov_rice_dish_c2c15446.jpg";
+import plovImage from "@assets/stock_images/menu/osh.jpg";
 import mantyImage from "@assets/stock_images/manty_dumplings_cent_45246789.jpg";
 import interiorImage from "@assets/stock_images/cozy_warm_restaurant_5c6c7aae.jpg";
-import lagmanImage from "@assets/stock_images/lagman_noodle_soup_c_320e3471.jpg";
-import samsaImage from "@assets/stock_images/samsa_meat_pastry_ba_6d113edf.jpg";
-import shashlikImage from "@assets/stock_images/lamb_shashlik_kebab__90656a8c.jpg";
-import teaImage from "@assets/stock_images/central_asian_tea_ce_6b705fac.jpg";
+import lagmanImage from "@assets/stock_images/menu/uygurishe lagman.jpg";
+import samsaImage from "@assets/stock_images/menu/somsa.jpg";
+import shashlikImage from "@assets/stock_images/menu/shashlyk-meat-centralasia-food.jpg";
+import teaImage from "@assets/stock_images/menu/tea_1.jpg";
 import carpetImage from "@assets/stock_images/persian_carpet.jpg";
 
 const langNames: Record<Language, string> = {
