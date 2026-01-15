@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import { Link } from "wouter";
 import { translations, Language } from "@/lib/i18n";
 import { useMusic } from "@/lib/MusicContext";
@@ -23,6 +23,10 @@ export default function Datenschutz() {
   const [lang, setLang] = useState<Language>("de");
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const { musicPlaying, toggleMusic } = useMusic();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground relative">

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import { Link } from "wouter";
 import { translations, Language } from "@/lib/i18n";
 import { useMusic } from "@/lib/MusicContext";
@@ -157,8 +157,8 @@ export default function MenuPage() {
   const t = translations[lang];
   const cats = menuCategories[lang];
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   const getDishInfo = (dish: any) => {
